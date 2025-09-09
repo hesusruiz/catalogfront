@@ -7,7 +7,7 @@ export const init_config = {
         'pollPath': '/poll',
         'pollCertPath': '/cert/poll',
         'clientID': 'marketplace-client',
-        'callbackURL': 'http://proxy.docker:8004/auth/vc/callback',
+        'callbackURL': 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/auth/vc/callback',
         'verifierHost': 'https://verifier.dome-marketplace.org',
         'verifierQRCodePath': '/api/v1/loginQR',
         'requestUri': '/auth/vc/request.jwt'
@@ -192,10 +192,10 @@ export const local_items = {
   export const checkHeaderPreLogin = () => {
     // Mocks
     //TODO: update urls according to environment
-    //cy.intercept( {method:'GET', url: 'http://proxy.docker:8004/stats'}, init_stat).as('stats')
-    //cy.intercept( {method: 'GET', url: 'http://proxy.docker:8004/catalog/productOffering?*'}, product_offering).as('productOffering')
-    //cy.intercept( {method: 'GET', url: 'http://proxy.docker:8004/config'}, init_config).as('config')
-    //cy.intercept( {method:'GET', url: 'http://proxy.docker:8004/catalog/category?*'}, category_launched).as('category')
+    //cy.intercept( {method:'GET', url: 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/stats'}, init_stat).as('stats')
+    //cy.intercept( {method: 'GET', url: 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/productOffering?*'}, product_offering).as('productOffering')
+    //cy.intercept( {method: 'GET', url: 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/config'}, init_config).as('config')
+    //cy.intercept( {method:'GET', url: 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/category?*'}, category_launched).as('category')
     // Verify mocks are called 1 time
     cy.visit('/', {onBeforeLoad(win) {
         win.localStorage.setItem('color-theme', 'dark');
@@ -258,7 +258,7 @@ export const loginAcc = () => {
         cy.intercept(
             {
               method: 'GET',
-              url: 'http://proxy.docker:8004/logintoken'
+              url: 'https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/logintoken'
             },
             (req) => {
               req.reply({

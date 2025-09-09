@@ -261,7 +261,7 @@ export class CreateServiceSpecComponent implements OnInit {
         relatedParty: [
           {
               id: this.partyId,
-              //href: "http://proxy.docker:8004/party/individual/urn:ngsi-ld:individual:803ee97b-1671-4526-ba3f-74681b22ccf3",
+              //href: "https://tmf.evidenceledger.eu/tmf-api/productCatalogManagement/v5/party/individual/urn:ngsi-ld:individual:803ee97b-1671-4526-ba3f-74681b22ccf3",
               role: "Owner",
               "@referredType": ''
           }
