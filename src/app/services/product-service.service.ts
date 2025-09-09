@@ -1,25 +1,21 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {catchError, lastValueFrom, map, of} from 'rxjs';
-import { Category, LoginInfo } from '../models/interfaces';
+import {catchError, lastValueFrom, of} from 'rxjs';
+import { Category } from '../models/interfaces';
 import { environment } from 'src/environments/environment';
-import {components} from "../models/product-catalog";
-type ProductOffering = components["schemas"]["ProductOffering"];
-import {LocalStorageService} from "./local-storage.service";
-import * as moment from 'moment';
 import { jwtDecode } from "jwt-decode";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServiceService {
-  public static BASE_URL: String = environment.BASE_URL;
-  public static API_PRODUCT: String = environment.PRODUCT_CATALOG;
-  public static PRODUCT_LIMIT: number = environment.PRODUCT_LIMIT;
-  public static CATALOG_LIMIT: number= environment.CATALOG_LIMIT;
-  public static CATEGORY_LIMIT: number = environment.CATEGORY_LIMIT;
+  public static readonly BASE_URL: String = environment.BASE_URL;
+  public static readonly API_PRODUCT: String = environment.API_PRODUCT;
+  public static readonly PRODUCT_LIMIT: number = environment.PRODUCT_LIMIT;
+  public static readonly CATALOG_LIMIT: number= environment.CATALOG_LIMIT;
+  public static readonly CATEGORY_LIMIT: number = environment.CATEGORY_LIMIT;
 
-  constructor(private http: HttpClient,private localStorage: LocalStorageService) { }
+  constructor(private readonly http: HttpClient) { }
 
   getProducts(page:any,keywords:any) {
     let url = `${ApiServiceService.BASE_URL}${ApiServiceService.API_PRODUCT}/productOffering?limit=${ApiServiceService.PRODUCT_LIMIT}&offset=${page}&lifecycleStatus=Launched`;

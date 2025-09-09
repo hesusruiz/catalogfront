@@ -1,8 +1,9 @@
 export const environment = {
-    BASE_URL: '',
+    BASE_URL: 'https://tmf.evidenceledger.eu/tmf-api',
     PAYMENT_URL: 'https://payment.dome-marketplace-sbx.org',
     LEGACY_PREFIX: '/ux',
     PRODUCT_CATALOG: '/catalog',
+    API_PRODUCT: '/productCatalogManagement/v5',
     SERVICE: '/service',
     RESOURCE: '/resource',
     PRODUCT_SPEC: '/productSpecification',

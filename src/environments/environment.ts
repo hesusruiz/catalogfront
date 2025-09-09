@@ -1,11 +1,12 @@
 export const environment = {
-    BASE_URL: 'http://localhost:8004',
+    BASE_URL: 'https://tmf.evidenceledger.eu/tmf-api',
     PAYMENT_URL: 'https://payment.dome-marketplace-sbx.org',
     LEGACY_PREFIX: '',
     //API_PORT: 8632,
     //API_PORT: 8004,
     //API ENDPOINTS
     PRODUCT_CATALOG: '/catalog',
+    API_PRODUCT: '/productCatalogManagement/v5',
     SERVICE: '/service',
     RESOURCE: '/resource',
     PRODUCT_SPEC: '/productSpecification',
