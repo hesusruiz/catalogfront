@@ -1240,7 +1240,7 @@
     "_send": "Send",
     "_thanks": "Thank you for contacting ISBE Catalog."
   },
-  "COUNTRIES": {
+  "COUNTRY": {
     "_select_country": "Select country",
     "AF": "Afghanistan",
     "AX": "Åland Islands",
