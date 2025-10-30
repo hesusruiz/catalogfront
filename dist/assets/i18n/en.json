@@ -990,6 +990,7 @@
         "_order_by": "Order by...",
         "_last_update": "Last update",
         "_name": "Name",
+        "_in_design": "In design",
         "_active": "Active",
         "_launched": "Launched",
         "_retired": "Retired",
